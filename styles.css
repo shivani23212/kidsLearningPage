@@ -224,3 +224,34 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 7px;
 }
+
+
+/* ----------------------------------- Maths ---------------------------------- */
+.boxes {
+    display: flex;
+    width: 100%;
+}
+
+.progress {
+    border: 1px solid white;
+    border-right: none;
+    position: relative;
+}
+
+.progress-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #7ecc00;
+    opacity: 0.57;
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: 0.4s ease-out;
+}
+
+.box {
+    height: 40px;
+    border-right: 2px solid white;
+    flex: 1;
+}

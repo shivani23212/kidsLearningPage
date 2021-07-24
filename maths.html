@@ -8,7 +8,34 @@
     <title>Maths</title>
 </head>
 <body>
-    
-    
+    <div class="main-ui">
+        <p class="problem"></p>
+
+        <form action="" id="entry-form">
+            <input type="text" class="entry-field" autocomplete="off">
+            <button>Submit</button>
+        </form>
+
+        <p>You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes.</p>
+
+        <div class="progress">
+            <div class="boxes">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="progress-inner"></div>
+        </div>
+
+    </div>
+
+    <script src="maths.js"></script>
 </body>
 </html>
