@@ -4,6 +4,8 @@ const entryField = document.querySelector(".entry-field");
 const pointsNeeded = document.querySelector("#points-needed");
 const mistakesAllowed = document.querySelector("#mistakes-allowed");
 const progressBar = document.querySelector(".progress-inner");
+const endMsg = document.querySelector(".endMsg");
+const resetBtn = document.querySelector(".resetButton");
 
 let state = {
     score: 0,
@@ -38,19 +40,24 @@ function resetGame() {
     pointsNeeded.textContent = 10;
     mistakesAllowed.textContent = 2;
     renderProgressBar();
+    document.body.classList.remove("overlay-is-open");  
 }
 
 // checks if user wins or loses
 function checkLogic() {
     if (state.score === 10) {
-        alert("yes bestie u wonnnn <3");
-        resetGame();
+        endMsg.textContent = "Congradululuations, you won!1!!11 :)";
+        document.body.classList.add("overlay-is-open");
+        setTimeout(() => {resetBtn.focus()}, 331);
     }
-    if (state.wrongAns === 3) {
-        alert("lmao u lost bitch");
-        resetGame();
+    else if (state.wrongAns === 3) {
+        endMsg.textContent = "Sorry, you made 3 mistakes and lost.";
+        document.body.classList.add("overlay-is-open");   
+        setTimeout(() => {resetBtn.focus()}, 331); 
     }
 }
+
+resetBtn.addEventListener("click", resetGame);
 
 function handleSubmit(event) {
     event.preventDefault(); // stops page reloading on button click / enter of form
@@ -65,16 +72,17 @@ function handleSubmit(event) {
         correctAns = currProb.number1 * currProb.number2;
     }
 
-    if (parseInt(entryField.value, 10) === correctAns) {
+    if (parseInt(entryField.value, 10) === correctAns) { // if user get q correct
         state.score++;
         pointsNeeded.textContent = 10 - state.score;
         updateProblem();
         renderProgressBar();
 
-    }
-    else {
+    } else {
         state.wrongAns++;
         mistakesAllowed.textContent = 2 - state.wrongAns;
+        problemElement.classList.add("animateWrong");
+        setTimeout(() => {problemElement.classList.remove("animateWrong")}, 331);
     } 
 
     checkLogic()

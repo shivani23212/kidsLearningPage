@@ -255,3 +255,50 @@ body {
     border-right: 2px solid white;
     flex: 1;
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.62);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    visibility: hidden;
+    transition: all 0.33s ease-out;
+    transform: scale(1.2);
+}
+
+body.overlay-is-open .overlay {
+    /* opacity: 1; */
+    visibility: visible;
+    transform: scale(1);
+}
+
+body.overlay-is-open .main-ui {
+    filter: blur(4px)
+}
+
+@keyframes zoomInOut {
+    50% {
+        color: red;
+        transform: scale(1.2);
+    }
+
+    100% {
+        color: black;
+        transform: scale(1);
+    }
+}
+
+.animateWrong {
+    animation: 0.33s zoomInOut;
+}
+
+.problem {
+    text-align: center;
+}
