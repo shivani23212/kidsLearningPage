@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Noto+Sans+JP&display=swap');
 
+.transition-fade {
+    opacity: 1;
+    transition: 550ms;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
 
 html {
     color: #FFF;
@@ -237,7 +245,11 @@ body {
     display: flex;
     justify-content: center;
     white-space:nowrap;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+    font-family: 'Acme', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .boxes {
@@ -337,6 +349,7 @@ body.overlay-is-open .main-ui {
     text-align: center;
     margin-bottom: 10px;
     color: #9380fc;
+    margin-bottom: 50px;
 }
 
 .overlay.inner {
