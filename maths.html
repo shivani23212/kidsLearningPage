@@ -5,10 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Maths</title>
 </head>
 <body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active" id="logo"><img src="images/logo.png" alt="logo"></a>
+        <div class="linksContainer">
+        <a href="#maths.html">Maths</a>
+        <a href="#">English</a>
+        <a href="#">Science</a>
+        <a href="#" class="lastLink">About</a>
+    </div>
+        <a href= "javascript:void(0);" class="icon lastLink"
+        onclick="myFunction()"><i class="fa fa-bars"></i></a>
+</div>
+
+
     <div class="main-ui">
+        <p id="title-math">Mental Arithmetic</p>
         <p class="problem"></p>
 
         <form action="" id="entry-form">
@@ -16,7 +31,7 @@
             <button>Submit</button>
         </form>
 
-        <p>You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes.</p>
+        <p id="info">You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes.</p>
 
         <div class="progress">
             <div class="boxes">
