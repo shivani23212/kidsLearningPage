@@ -68,7 +68,7 @@ function resetGame() {
 // checks if user wins or loses
 function checkLogic() {
     if (state.score === 10) {
-        endMsg.textContent = "Congradululuations, you won!1!!11 :)";
+        endMsg.textContent = "Congrats, you've won the game!"
         document.body.classList.add("overlay-is-open");
         setTimeout(() => {resetBtn.focus()}, 331);
     }

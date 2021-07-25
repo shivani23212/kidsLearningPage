@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Noto+Sans+JP&display=swap');
+
+
 html {
     color: #FFF;
     overflow: hidden;
@@ -177,7 +180,7 @@ body {
     .topnav.responsive #logo img {
         width: 420px;
         display: flex;
-        
+
     }
 
     .topnav.responsive .linksContainer {
@@ -336,8 +339,43 @@ body.overlay-is-open .main-ui {
     color: #9380fc;
 }
 
+.overlay.inner {
+    font-family: 'Acme', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px; 
+}
+
+.overlay .endMsg {
+    font-size: 2.5rem;
+    font-weight: 900;
+    white-space: nowrap;
+    color: #4499fa;
+}
+
+.resetButton {
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #6cccf8;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+}
+
+.resetButton:hover {
+    background-color: #39b9f5;
+}
+
 @media screen and (max-width: 600px) {
     #title-math {
         font-size: 4em;
+    }
+
+    .overlay .endMsg {
+        font-size: 2rem;
     }
 }
