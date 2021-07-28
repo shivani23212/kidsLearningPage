@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-    <script defer src="maths.js"></script> 
-    <script defer src="callSwup.js"></script>  
-    <title>Maths</title>
-</head>
-<body> 
-    <div class="topnav" id="myTopnav">
-        <a href="/index.html" class="active" id="logo"><img src="images/logo.png" alt="logo"></a>
-        <div class="linksContainer">
-        <a href="#maths.html">Maths</a>
-        <a href="#">English</a>
-        <a href="#">Science</a>
-        <a href="#" class="lastLink">About</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+        <script defer src="dynamicNavbar.js"></script>
+        <script defer src="maths.js"></script> 
+        <script defer src="callSwup.js"></script>  
+        <title>Maths</title>
+    </head>
+    <body> 
+        <div class="topnav" id="myTopnav">
+            <a href="/index.html" class="active" id="logo"><img src="images/logo.png" alt="logo"></a>
+            <div class="linksContainer">
+            <a href="#maths.html">Maths</a>
+            <a href="#">English</a>
+            <a href="#">Science</a>
+            <a href="#" class="lastLink">About</a>
+        </div>
+            <a href= "javascript:void(0);" class="icon lastLink"
+            onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
-        <a href= "javascript:void(0);" class="icon lastLink"
-        onclick="myFunction()"><i class="fa fa-bars"></i></a>
-</div>
 
-<main id="swup" class="transition-fade">
-    <div class="main-ui">
-        <p id="title-math">Mental Arithmetic</p>
-        <p class="problem"></p>
+    <main id="swup" class="transition-fade">
+        <div class="main-ui">
+            <p id="title-math">Mental Arithmetic</p>
+            <p class="problem"></p>
 
-        <form action="" id="entry-form">
-            <input type="text" class="entry-field" autocomplete="off">
-            <button>Submit</button>
-        </form>
+            <form action="" id="entry-form">
+                <input type="text" class="entry-field" autocomplete="off">
+                <button>Submit</button>
+            </form>
 
-        <p id="info">You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes.</p>
+            <p id="info">You need <span id="points-needed">10</span> more points, and are allowed to make <span id="mistakes-allowed">2</span> more mistakes.</p>
 
-        <div class="progress">
-            <div class="boxes">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
+            <div class="progress">
+                <div class="boxes">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="progress-inner"></div>
             </div>
-            <div class="progress-inner"></div>
+
         </div>
 
-    </div>
-
-    <div class="overlay">
-        <div class="overlay inner">
-            <p class="endMsg"></p>
-            <button class="resetButton">Start Again</button>
+        <div class="overlay">
+            <div class="overlay inner">
+                <p class="endMsg"></p>
+                <button class="resetButton">Start Again</button>
+            </div>
         </div>
-    </div>
-
     </main>
-</body>
+    </body>
 </html>

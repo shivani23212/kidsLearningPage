@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
-    <script defer src="callSwup.js"></script>  
-    <title>Education City</title>
-</head>
-<body>
-    <div class="topnav" id="myTopnav">
-            <a href="/index.html" class="active" id="logo"><img src="images/logo.png" alt="logo"></a>
-            <div class="linksContainer">
-            <a href="/maths.html">Maths</a>
-            <a href="#">English</a>
-            <a href="#">Science</a>
-            <a href="#" class="lastLink">About</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script defer src="dynamicNavbar.js"></script>
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+        <script defer src="callSwup.js"></script>  
+        <title>Education City</title>
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+                <a href="/index.html" class="active" id="logo"><img src="images/logo.png" alt="logo"></a>
+                <div class="linksContainer">
+                <a href="/maths.html">Maths</a>
+                <a href="/english.html">English</a>
+                <a href="#">Science</a>
+                <a href="#" class="lastLink">About</a>
+            </div>
+                <a href= "javascript:void(0);" class="icon lastLink"
+                onclick="myFunction()"><i class="fa fa-bars"></i></a>
         </div>
-            <a href= "javascript:void(0);" class="icon lastLink"
-            onclick="myFunction()"><i class="fa fa-bars"></i></a>
-    </div>
 
-    <main id="swup" class="transition-fade">
+        <main id="swup" class="transition-fade">
+            <div id="title">Education City</div>
+            <div id = "instruction">Choose a subject...</div>
 
-    <div id="title">Education City</div>
+            <div id="subjectBtns">
+                <a href="/maths.html"><button id="mathsBth">Maths</button></a>
+                <a href="/english.html"><button id="engBth">English</button></a>
+                <button id="sciBtn">Science</button>
+            </div>
 
-    <div id = "instruction">Choose a subject...</div>
-
-    <div id="subjectBtns">
-        <a href="/maths.html"><button id="mathsBth">Maths</button></a>
-        <button id="engBth">English</button>
-        <button id="sciBtn">Science</button>
-    </div>
-
-    <div class="footer">
-        <p>© Education City 2021. All rights reserved.</p>
-    </div>
-
-    <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-
-        /* stops vertical navbar from reappearing after window width increased without clicking off the navbar
-         then width decreased */
-        window.addEventListener("resize", function(event) {
-            let width = document.documentElement.clientWidth;
-            let topNav = document.getElementById("myTopnav");
-            if (width > 800 && topNav.className === "topnav responsive") {
-                topNav.className = "topnav";
-            }
-        }, true);
-
-    </script>
-    </main>
-</body>
+            <div class="footer">
+                <p>© Education City 2021. All rights reserved.</p>
+            </div>
+        </main>
+    </body>
 </html>
